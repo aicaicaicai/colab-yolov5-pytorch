@@ -25,13 +25,13 @@ class YOLO(object):
         #   验证集损失较低不代表mAP较高，仅代表该权值在验证集上泛化性能较好。
         #   如果出现shape不匹配，同时要注意训练时的model_path和classes_path参数的修改
         #--------------------------------------------------------------------------#
-        "model_path"        : '/content/gdrive/MyDrive/Models/Yolov5Pytorch/model_data/convnext_small_1k_224_ema_no_jit.pth',
+        "model_path"        : '/content/gdrive/MyDrive/Models/Yolov5Pytorch/model_data/yolov5_s.pth',
         "classes_path"      : '/content/gdrive/MyDrive/Models/Yolov5Pytorch/model_data/voc_classes.txt',
         #---------------------------------------------------------------------#
         #   anchors_path代表先验框对应的txt文件，一般不修改。
         #   anchors_mask用于帮助代码找到对应的先验框，一般不修改。
         #---------------------------------------------------------------------#
-        "anchors_path"      : 'model_data/yolo_anchors.txt',
+        "anchors_path"      : '/content/gdrive/MyDrive/Models/Yolov5Pytorch/model_data/yolo_anchors.txt',
         "anchors_mask"      : [[6, 7, 8], [3, 4, 5], [0, 1, 2]],
         #---------------------------------------------------------------------#
         #   输入图片的大小，必须为32的倍数。
@@ -43,7 +43,7 @@ class YOLO(object):
         #                   convnext_small
         #                   swin_transfomer_tiny
         #------------------------------------------------------#
-        "backbone"          : 'convnext_small',
+        "backbone"          : 'cspdarknet',
         #------------------------------------------------------#
         #   所使用的YoloV5的版本。s、m、l、x
         #   在除cspdarknet的其它主干中仅影响panet的大小
